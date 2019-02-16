@@ -1,0 +1,12 @@
+{% extends "webapp/base.html" %}
+{% block content %}
+<div class="media border border-info p-5 rounded">
+  <div class="media-body">
+    <img src="{{ user.profile.image.url }}" class="rounded-circle" alt="" style="width:200px; height:200px;">
+    <h4>User ID : {{ user.username }}</h4>
+      <p>Bio : {{user.bio}}</p>
+    <a href="{% url 'edit_profie' %}"> <button class="btn btn-warning">edit</button></a>
+  </div>
+</div>
+
+{% endblock content%}

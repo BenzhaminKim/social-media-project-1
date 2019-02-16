@@ -1,0 +1,21 @@
+{% extends "webapp/base.html" %}
+{% block content %}
+<div class="card mb-4">
+<!-- <img class="card-img-top" src="#" alt="Card image cap"> -->
+ <div class="card-body">
+   <h2 class="card-title">{{ post.title }}</h2>
+   <p class="card-text">{{ post.content | safe}}</p>
+ </div>
+ <div class="card-footer text-muted">
+   Posted on {{ post.date_posted }} by
+   <a href="#">{{ post.author }}</a>
+   <div>
+  {% if post.author == user %}
+    <a class="btn btn-secondary btn-sm mt-1 mb-1 "href="{% url 'note-update' post.id %}"> Edit </a>
+    <a class="btn btn-danger btn-sm mt-1 mb-1 "href="{% url 'note-delete' post.id %}"> Delete </a>
+  {% endif %}
+  </div>
+ </div>
+
+</div>
+{% endblock content %}

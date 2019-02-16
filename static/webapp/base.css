@@ -1,0 +1,29 @@
+body{
+  background-color: #ccc;
+}
+
+#about {
+  padding: 150px 0;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.text-block{
+  position:absolute;
+  top:45%;
+  width:100%;
+}
+
+.container{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.cut-text{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:850px;
+}
